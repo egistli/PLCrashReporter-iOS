@@ -27,6 +27,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/egistli/PLCrashReporter-iOS.git", :tag => "1.1"}
   s.source_files  = '1.1/CrashReporter.framework/Versions/A/Headers/*.h'
-  s.preserve_paths = "1.1/CrashReporter.framework"
+  s.preserve_paths = "1.1/CrashReporter.framework/*"
+  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/PLCrashReporter-iOS/1.1"', 'OTHER_LDFLAGS' => '-ObjC -all_load -weak_library /usr/lib/libstdc++.dylib ' }
 
 end
