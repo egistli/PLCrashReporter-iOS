@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://www.plcrashreporter.org/"
-  s.license      = { :type => 'Custom', :file => 'LICENSE' }
+  s.license      = { :type => 'Custom', :file => './LICENSE' }
   s.author       = 'Plausible Labs'
 
   s.platform = :ios
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'CrashReporter'
 
   s.source       = { :git => "https://github.com/egistli/PLCrashReporter-iOS.git", :tag => "1.1"}
-  s.source_files  = '1.1/CrashReporter.framework/Headers'
+  s.source_files  = '1.1/CrashReporter.framework/Versions/A/Headers/*.h'
   s.preserve_paths = "1.1/CrashReporter.framework"
 
 end
